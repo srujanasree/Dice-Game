@@ -16,7 +16,8 @@ const switchPlayer = function () {
     currentPlayer = currentPlayer=== 0 ? 1 : 0;
     currentScore = 0;
     switchMessage.textContent=`PLAYER ${currentPlayer+1} TURN`;
-}
+};
+
 const rollDice = function(){
     const dice=Math.floor(Math.random()*6)+1;
     switchMessage.textContent='';
@@ -27,8 +28,7 @@ const rollDice = function(){
     } else {
         switchPlayer();   
     }  
-  
-  }
+};
 
 rolldice .addEventListener('click', rollDice);
 
@@ -57,4 +57,4 @@ document.querySelector('.btn--new').addEventListener('click',function () {
     hold.classList.remove('hidden');
     document.querySelector("#score--0").textContent=0;
     document.querySelector("#score--1").textContent=0;
-})
+});
