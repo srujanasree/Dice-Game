@@ -35,11 +35,10 @@ rolldice .addEventListener('click', rollDice);
 hold.addEventListener('click',function () {
     score[currentPlayer] += currentScore; 
     document.querySelector(`#score--${currentPlayer}`).textContent = score[currentPlayer];
-    if (score[currentPlayer] >= 100) {
+    if ( score[currentPlayer] >= 100 ) {
         rolldice.classList.add('hidden');
         hold.classList.add('hidden');
         switchMessage.textContent=`PLAYER ${currentPlayer+1} WON THE GAME`;
-
     }
     else{
         switchPlayer();
